@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Land Listings</title>
+</head>
+<body>
+    <h1>Land Listings</h1>
+    <ul>
+        {% for land in lands %}
+            <li><a href="{% url 'land_detail' land.pk %}">{{ land.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
